@@ -34,6 +34,7 @@ public class ShopController : MonoBehaviour
         {
             if (boughtCards.Contains(shopCard.GetId()))
             {
+                print(shopCard.GetId());
                 shopCard.SetIsBought(true);
             }
         }

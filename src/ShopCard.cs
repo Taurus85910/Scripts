@@ -16,10 +16,10 @@ public class ShopCard : MonoBehaviour
     [SerializeField] private int cost;
     [SerializeField] private bool isBought = false;
     [SerializeField] private int id;
-    
+    public int GetId() => id;
     public bool GetIsBought() => isBought;
     public bool SetIsBought(bool val) => isBought = val;
-    public int GetId() => id;
+    
     public void DisableAllWeapons()
     {
         foreach (Transform iter in weaponStorage.transform)
@@ -31,6 +31,7 @@ public class ShopCard : MonoBehaviour
     public void ChangeColorToSelect()
     {
         buttonImg.color = Color.green;
+        buttonText.text = "Select";
     }
     private void BuyWeapon()
     {
@@ -41,10 +42,9 @@ public class ShopCard : MonoBehaviour
         
         playerMoney.ReduceMoney(cost);
         ChangeColorToSelect();
-        buttonText.text = "Select";
         isBought = true;
     }
-
+    
     private void SelectWeapon()
     {
         DisableAllWeapons();

@@ -9,7 +9,7 @@ public class PlayerMoney : MonoBehaviour
     private int currentMoney = 0;
     void Start()
     {
-        currentMoney = 20;
+        //currentMoney = 20;
         UpdateMoneyUI();
     }
     private void UpdateMoneyUI()

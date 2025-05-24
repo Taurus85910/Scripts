@@ -14,7 +14,6 @@ public class Vendor : MonoBehaviour
     private void Start()
     {
         interactionUI.SetActive(false);
-        shopUI.SetActive(false);
     }
 
     private void Update()

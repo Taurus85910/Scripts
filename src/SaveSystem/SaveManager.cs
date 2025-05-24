@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class SaveManager
 {
-    private static string SavePath => Application.persistentDataPath + "/save.json";
-
+    private static string SavePath => 
+        Application.persistentDataPath + "/save.json";
     public static void SaveGame(SaveData data)
     {
         string json = JsonUtility.ToJson(data, true);
@@ -22,11 +22,8 @@ public static class SaveManager
             Debug.Log("Game loaded from " + SavePath);
             return data;
         }
-        else
-        {
-            Debug.LogWarning("Save file not found, creating new save.");
-            return new SaveData();
-        }
+        return new SaveData();
+        
     }
 
     public static void DeleteSave()

@@ -6,5 +6,6 @@ using System.Collections.Generic;
     public class SaveData
     {
         public int money;
-        public List<int> unlockedWeaponIds = new List<int>();
+        public List<int> unlockedWeaponIds 
+            = new List<int>();
     }

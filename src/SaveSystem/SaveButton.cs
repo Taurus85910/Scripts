@@ -10,8 +10,11 @@ public class SaveButton : MonoBehaviour
 
     public void OnButtonClick()
     {
-        SaveService.Instance.SaveData.money = playerMoney.GetMoney();
-        SaveService.Instance.SaveData.unlockedWeaponIds = shopController.GetBoughtCards();
+        SaveService.Instance.SaveData.money 
+            = playerMoney.GetMoney();
+        SaveService.Instance.SaveData.
+            unlockedWeaponIds = 
+            shopController.GetBoughtCards();
         SaveService.Instance.Save();
     }
 }
